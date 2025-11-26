@@ -5,249 +5,574 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Resumo do Livro: Os 7 Hábitos</title>
 
+<!-- Fonte Roboto (manual Unilog) -->
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 
 <style>
     :root {
         --cinza-unilog: #494a56;
         --vermelho-unilog: #db0812;
-        --cinza-claro: #f7f7f8;
-        --cinza-clarissimo: #ffffff;
-        --cinza-texto: #666;
-        --shadow: 0 4px 20px rgba(0,0,0,0.08);
+        --azul-sec: #accfcc;
+        --amarelo-sec: #f2d750;
+        --branco: #ffffff;
+        --cinza-fundo: #f4f4f6;
     }
 
-    * { box-sizing: border-box; }
+    * {
+        box-sizing: border-box;
+    }
+
     body {
         margin: 0;
         font-family: "Roboto", Arial, sans-serif;
-        background: var(--cinza-claro);
-        color: var(--cinza-texto);
-        line-height: 1.8;
-    }
-
-    /* HERO SECTION (estilo da imagem) */
-    .hero {
-        background: var(--cinza-clarissimo);
-        padding: 80px 20px;
-        text-align: center;
-        box-shadow: 0 1px 10px rgba(0,0,0,0.05);
-    }
-
-    .hero h1 {
-        font-size: 44px;
-        color: var(--cinza-unilog);
-        margin-bottom: 15px;
-        font-weight: 700;
-        line-height: 1.2;
-    }
-
-    .hero h1 span {
-        color: var(--vermelho-unilog);
-    }
-
-    .hero p {
-        font-size: 18px;
-        max-width: 650px;
-        margin: 0 auto;
-    }
-
-    /* ÁREA DE CONTEÚDO */
-    main {
-        max-width: 1100px;
-        margin: auto;
-        padding: 40px 20px;
-    }
-
-    /* Seções suaves alternadas */
-    .section {
-        background: var(--cinza-clarissimo);
-        padding: 60px;
-        border-radius: 16px;
-        box-shadow: var(--shadow);
-        margin: 40px 0;
-    }
-
-    .section h2 {
-        font-size: 30px;
-        color: var(--cinza-unilog);
-        font-weight: 700;
-        margin-top: 0;
-    }
-
-    .section p, .section ul {
-        font-size: 16px;
-    }
-
-    /* Cards estilo template */
-    .card {
-        background: var(--cinza-unilog);
-        color: white;
-        padding: 28px;
-        border-radius: 18px;
-        margin-top: 20px;
+        background: var(--cinza-fundo);
+        color: #333;
         line-height: 1.7;
-        box-shadow: var(--shadow);
     }
 
-    .card strong {
-        color: var(--vermelho-unilog);
-    }
-
-    /* Grids */
-    .grid {
-        display: grid;
-        gap: 25px;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        margin-top: 35px;
-    }
-
-    .grid-item {
-        background: white;
-        padding: 25px;
-        border-radius: 18px;
-        box-shadow: var(--shadow);
-    }
-
-    .grid-item h3 {
-        font-size: 20px;
-        margin-top: 0;
+    /* BARRA TOPO */
+    header {
+        background: var(--branco);
         color: var(--cinza-unilog);
-        font-weight: 700;
-    }
-
-    footer {
-        text-align: center;
-        padding: 40px;
-        background: var(--cinza-unilog);
-        color: white;
-        margin-top: 80px;
+        padding: 18px 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         font-size: 14px;
     }
 
-    @media (max-width: 800px) {
-        .hero h1 { font-size: 34px; }
-        .section { padding: 30px; }
+    header .logo {
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+
+    header .logo span {
+        color: var(--vermelho-unilog);
+    }
+
+    header .tagline {
+        opacity: 0.8;
+    }
+
+    main {
+        max-width: 1100px;
+        margin: 0 auto 80px auto;
+        padding: 40px 20px 0 20px;
+    }
+
+    /* HERO – primeira dobra */
+    .hero-section {
+        background: var(--branco);
+        border-radius: 18px;
+        padding: 45px 30px;
+        box-shadow: 0 8px 22px rgba(0,0,0,0.06);
+        margin: 40px 0 60px 0;
+        text-align: left;
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        align-items: center;
+    }
+
+    .hero-text {
+        flex: 2;
+    }
+
+    .hero-text h1 {
+        font-size: 34px;
+        margin: 0 0 12px 0;
+        color: var(--cinza-unilog);
+    }
+
+    .hero-text h1 span {
+        color: var(--vermelho-unilog);
+    }
+
+    .hero-text p {
+        font-size: 16px;
+        margin: 6px 0;
+    }
+
+    .hero-highlight {
+        flex: 1.4;
+        background: var(--cinza-unilog);
+        color: var(--branco);
+        padding: 26px 22px;
+        border-radius: 18px;
+        font-size: 14px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+    }
+
+    .hero-highlight strong {
+        color: var(--amarelo-sec);
+    }
+
+    /* SEÇÕES EM BLOCOS */
+    .section {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 40px;
+        margin: 60px 0;
+        background: var(--branco);
+        border-radius: 18px;
+        padding: 35px 30px;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+    }
+
+    .section.reverse {
+        flex-direction: row-reverse;
+    }
+
+    .text-block {
+        flex: 1.6;
+    }
+
+    .text-block h2 {
+        font-size: 26px;
+        margin: 0 0 10px 0;
+        letter-spacing: 0.5px;
+        color: var(--cinza-unilog);
+        text-transform: uppercase;
+    }
+
+    .text-block h3 {
+        margin-top: 22px;
+        margin-bottom: 6px;
+        font-size: 18px;
+        color: var(--cinza-unilog);
+    }
+
+    .text-block p,
+    .text-block ul {
+        font-size: 15px;
+    }
+
+    .text-block ul {
+        padding-left: 18px;
+        margin: 8px 0;
+    }
+
+    .text-block li + li {
+        margin-top: 4px;
+    }
+
+    .card {
+        flex: 1.1;
+        background: var(--cinza-unilog);
+        color: var(--branco);
+        padding: 26px 22px;
+        border-radius: 18px;
+        font-size: 14px;
+        box-shadow: 0 8px 18px rgba(0,0,0,0.18);
+    }
+
+    .card strong {
+        color: var(--amarelo-sec);
+    }
+
+    .card ul {
+        padding-left: 18px;
+        margin: 10px 0 0 0;
+    }
+
+    /* FAIXAS GRANDES */
+    .banner {
+        margin: 70px 0 30px 0;
+        text-align: center;
+        font-size: 22px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        color: var(--cinza-unilog);
+        text-transform: uppercase;
+        opacity: 0.9;
+    }
+
+    .banner span {
+        color: var(--vermelho-unilog);
+    }
+
+    /* BLOCO DE LISTA FINAL */
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 25px;
+        margin: 30px 0 0 0;
+    }
+
+    .grid-item {
+        background: var(--branco);
+        border-radius: 18px;
+        padding: 22px 20px;
+        box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+        font-size: 14px;
+    }
+
+    .grid-item h3 {
+        margin-top: 0;
+        font-size: 16px;
+        color: var(--cinza-unilog);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    footer {
+        background: var(--cinza-unilog);
+        color: var(--branco);
+        text-align: center;
+        padding: 22px 15px;
+        font-size: 12px;
+        margin-top: 80px;
+    }
+
+    @media (max-width: 900px) {
+        .hero-section {
+            flex-direction: column;
+        }
+        .section,
+        .section.reverse {
+        flex-direction: column;
+        }
+        .grid {
+            grid-template-columns: 1fr;
+        }
     }
 </style>
 </head>
 
 <body>
 
-<!-- HERO SECTION -->
-<section class="hero">
-    <h1>
-        Os 7 Hábitos <span>Explicados de Maneira Simples</span>
-    </h1>
-    <p>Um guia direto, fácil e prático para entender o livro que transformou o jeito de trabalhar, pensar e viver.</p>
-</section>
+<header>
+    <div class="logo">Leitura Guiada • <span>Os 7 Hábitos</span></div>
+    <div class="tagline">Resumo explicado com exemplos simples</div>
+</header>
 
 <main>
 
-    <!-- SEÇÃO 1 -->
-    <section class="section">
-        <h2>Resumo Geral do Livro</h2>
-        <p>
-            O livro “Os 7 Hábitos das Pessoas Altamente Eficazes” ensina como qualquer pessoa 
-            pode ter uma vida mais organizada, tranquila e com melhores resultados.
-            Ele mostra que tudo começa dentro de você: seus pensamentos, atitudes e escolhas.
-        </p>
-        <p>
-            Quando você melhora seu jeito de agir, sua vida inteira melhora junto — trabalho, 
-            família, dinheiro, saúde, tudo.
-        </p>
-
-        <div class="card">
-            <strong>Em resumo:</strong><br>
-            O livro ensina como parar de apagar incêndios e passar a viver com clareza, ordem e propósito.
+    <!-- HERO: visão geral e resumo em uma frase -->
+    <section class="hero-section">
+        <div class="hero-text">
+            <h1>Entenda <span>Os 7 Hábitos</span> de um jeito simples e completo</h1>
+            <p>
+                Este material foi feito para quem quer entender o livro
+                <strong>“Os 7 Hábitos das Pessoas Altamente Eficazes”</strong> sem enrolação,
+                com linguagem fácil e muitos exemplos do dia a dia.
+            </p>
+            <p>
+                A ideia é que qualquer pessoa consiga ler e pensar: 
+                <em>“ok, eu entendi, consigo me ver nessas situações e já sei por onde começar”.</em>
+            </p>
+        </div>
+        <div class="hero-highlight">
+            <strong>Resumo em uma frase:</strong><br><br>
+            O livro mostra como mudar seus hábitos para sair da vida só de reação
+            (apagando incêndio o tempo todo) e construir uma vida mais organizada,
+            calma e com sentido – tanto no trabalho quanto na vida pessoal.
         </div>
     </section>
 
-    <!-- SEÇÃO 2 -->
+    <!-- RESUMO GERAL -->
     <section class="section">
-        <h2>Principais Insights</h2>
-
-        <ul>
-            <li><strong>A mudança começa dentro:</strong> nada muda fora se você não muda por dentro.</li>
-            <li><strong>Você escolhe como reage:</strong> mesmo sem controlar tudo, seu comportamento muda tudo.</li>
-            <li><strong>Objetivo dá direção:</strong> quem sabe o que quer decide melhor e vive com mais foco.</li>
-            <li><strong>Importante > Urgente:</strong> viver só na correria cansa; planejar evita problemas.</li>
-            <li><strong>Confiar leva tempo:</strong> cada atitude é um depósito (ou saque) na conta da confiança.</li>
-        </ul>
+        <div class="text-block">
+            <h2>Resumo geral do livro</h2>
+            <p>
+                Covey explica que muita gente tenta resolver os problemas da vida só “por fora”.
+                Muda de emprego, muda de chefe, muda de cidade… mas continua se sentindo
+                perdida, cansada ou frustrada.
+            </p>
+            <p>
+                Segundo ele, a verdadeira mudança começa <strong>por dentro</strong>.  
+                É como revisar a forma como você enxerga o mundo, o que você valoriza e
+                como decide as coisas. Quando essa parte interna muda, o jeito de viver muda também.
+            </p>
+            <p>O livro é dividido em três grandes blocos:</p>
+            <ul>
+                <li><strong>Vitória particular:</strong> você aprende a cuidar primeiro de si mesmo, da sua mente, do seu tempo e das suas escolhas (hábitos 1, 2 e 3).</li>
+                <li><strong>Vitória pública:</strong> depois que está mais firme por dentro, você aprende a se relacionar melhor com os outros (hábitos 4, 5 e 6).</li>
+                <li><strong>Renovação contínua:</strong> por fim, você aprende a se cuidar de forma constante para não “quebrar” (hábito 7).</li>
+            </ul>
+        </div>
 
         <div class="card">
-            <strong>Insight prático:</strong><br>
-            Quando você organiza sua vida igual organiza um bom processo logístico, tudo fica mais leve e mais eficiente.
+            <strong>Exemplo simples:</strong><br><br>
+            Pense num caminhão usado todos os dias, sem revisão, sem troca de óleo
+            e sem olhar pneu.  
+            Por fora, ele até roda, mas por dentro está se destruindo.  
+            A vida de muita gente é assim: por fora parece que está tudo “ok”,
+            mas por dentro a pessoa está sem direção, cansada e cheia de problema acumulado.  
+            <br><br>
+            O livro ensina justamente a fazer essa “manutenção interna”.
         </div>
     </section>
 
-    <!-- SEÇÃO 3 -->
-    <section class="section">
-        <h2>Entendendo os 7 Hábitos na Prática</h2>
+    <!-- INSIGHTS E PONTOS RELEVANTES -->
+    <div class="banner">
+        PRINCIPAIS INSIGHTS <span>E PONTOS RELEVANTES</span>
+    </div>
 
-        <h3>1. Seja Proativo</h3>
-        <p>Proativo é fazer antes do problema aparecer. Igual fazer revisão no carro antes de quebrar.</p>
-
-        <h3>2. Comece com o Objetivo em Mente</h3>
-        <p>É saber para onde está indo. Igual desenhar o mapa antes de iniciar o transporte.</p>
-
-        <h3>3. Primeiro o Mais Importante</h3>
-        <p>Chamado de Quadrante II: coisas importantes, mas que ainda não viraram emergência.</p>
-
-        <div class="card">
-            Exemplos de Quadrante II:<br><br>
-            • Treinar equipe<br>
-            • Planejar a semana<br>
-            • Fazer manutenção preventiva<br>
-            • Cuidar da saúde antes de adoecer
+    <section class="section reverse">
+        <div class="text-block">
+            <h2>Insights centrais do livro</h2>
+            <ul>
+                <li><strong>De dentro para fora:</strong> resultados duradouros aparecem quando você muda quem você é, não só o que você mostra para os outros.</li>
+                <li><strong>Responsabilidade pessoal:</strong> sempre existe uma parte da situação que é sua responsabilidade, mesmo que o erro não seja 100% seu.</li>
+                <li><strong>Visão de longo prazo:</strong> sem um norte claro, a pessoa vive “apagando incêndio”, mas sente que nunca sai do lugar.</li>
+                <li><strong>Importante x urgente:</strong> nem tudo que parece urgente é realmente importante. Se você cuida bem do importante, o urgente diminui.</li>
+                <li><strong>Confiança é construída:</strong> pequenas atitudes diárias constroem (ou destroem) a confiança com as pessoas.</li>
+                <li><strong>Ganha/ganha:</strong> é possível buscar soluções em que todos saem melhor, em vez de uma parte sempre perder.</li>
+            </ul>
+            <p>
+                Esses pontos não são “teoria bonita”.  
+                São ideias que, se aplicadas no dia a dia, reduzem muito o estresse
+                e trazem mais sensação de controle da própria vida.
+            </p>
         </div>
 
-        <h3>4. Pense Ganha/Ganha</h3>
-        <p>Buscar soluções boas para todos: você, o outro e a empresa.</p>
-
-        <h3>5. Procure Primeiro Compreender</h3>
-        <p>Ouvir antes de responder. Isso evita brigas e melhora acordos.</p>
-
-        <h3>6. Crie Sinergia</h3>
-        <p>Juntar forças diferentes para criar soluções melhores.</p>
-
-        <h3>7. Afine o Instrumento</h3>
-        <p>Cuidar de você em 4 áreas: corpo, mente, emoções e propósito.</p>
+        <div class="card">
+            <strong>Ligando com o mundo real:</strong>
+            <ul>
+                <li>Em vez de só reclamar do sistema, você passa a pensar: “o que EU posso fazer diferente aqui hoje?”.</li>
+                <li>Em vez de aceitar tudo no impulso, você compara com seu objetivo de longo prazo.</li>
+                <li>Em vez de viver só correndo atrás de problema, você cria rotina para evitar muitos deles.</li>
+                <li>Em vez de entrar em briga em toda discordância, você treina escutar e buscar acordo melhor.</li>
+            </ul>
+        </div>
     </section>
 
-    <!-- SEÇÃO 4 -->
-    <section class="section">
-        <h2>Resultados na Vida Real</h2>
+    <!-- HÁBITOS 1, 2, 3 -->
+    <div class="banner">
+        HÁBITOS 1, 2 E 3 • <span>VOCÊ COM VOCÊ MESMO</span>
+    </div>
 
+    <section class="section">
+        <div class="text-block">
+            <h2>Vitória particular: organizar a própria vida</h2>
+
+            <h3>Hábito 1 – Seja proativo</h3>
+            <p>
+                Ser proativo é entender que você não é só “empurrado” pela vida.  
+                Você tem sempre algum espaço para escolher como agir.
+            </p>
+            <p><strong>Exemplos práticos:</strong></p>
+            <ul>
+                <li>O trânsito está caótico. Você não controla o trânsito, mas escolhe se vai xingar, se estressar, ou aproveitar para ouvir algo útil.</li>
+                <li>Um processo na empresa está confuso. Em vez de só reclamar, você sugere uma forma simples de melhorar ou pelo menos registra a ideia.</li>
+                <li>Em casa, em vez de reagir na hora com grito, você respira, conta até 5 e responde de forma mais calma.</li>
+            </ul>
+
+            <h3>Hábito 2 – Comece com o objetivo em mente</h3>
+            <p>
+                É imaginar o resultado final que você deseja, antes de agir.
+                É quase como perguntar: <em>“Se tudo der certo, onde quero chegar?”</em>
+            </p>
+            <p><strong>Exemplos:</strong></p>
+            <ul>
+                <li>Antes de organizar um estoque, você pensa: “quero que qualquer pessoa ache qualquer item em menos de 1 minuto”. Isso guia todas as decisões.</li>
+                <li>Antes de aceitar um novo trabalho, você compara com seu objetivo de vida: “isso me aproxima ou me afasta do futuro que eu quero?”.</li>
+            </ul>
+
+            <h3>Hábito 3 – Primeiro o mais importante (Quadrante II)</h3>
+            <p>
+                Aqui entra o famoso <strong>Quadrante II</strong>.
+                Covey divide as atividades em quatro tipos:
+            </p>
+            <ul>
+                <li><strong>Urgente e importante:</strong> crise, emergência, problema explodindo.</li>
+                <li><strong>Urgente e não importante:</strong> interrupções, ligações que não decidem nada, reuniões desnecessárias.</li>
+                <li><strong>Não urgente e não importante:</strong> perda de tempo, distrações sem sentido.</li>
+                <li><strong>Quadrante II – Importante, mas não urgente:</strong> planejamento, prevenção, estudo, manutenção, cuidar da saúde, conversar antes da briga.</li>
+            </ul>
+            <p>
+                O segredo é viver mais no Quadrante II.  
+                Quando você cuida daquilo que é importante antes de virar emergência,
+                sua vida fica mais leve.
+            </p>
+            <p><strong>Exemplos de Quadrante II:</strong></p>
+            <ul>
+                <li>Manutenção preventiva do carro/caminhão.</li>
+                <li>Planejar a semana em vez de só “ir apagando fogo”.</li>
+                <li>Treinar a equipe em vez de só brigar depois do erro.</li>
+                <li>Ir ao médico/exame antes de sentir dor forte.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <strong>Resumo da vitória particular:</strong>
+            <ul>
+                <li>Eu reconheço que tenho poder de escolha.</li>
+                <li>Eu sei para onde quero ir (meus objetivos).</li>
+                <li>Eu organizo meu tempo priorizando o que é importante, não só o que está gritando na minha frente.</li>
+            </ul>
+            <p>
+                Quando esses três hábitos estão firmes, a pessoa se sente mais
+                dona da própria vida, e não só “levada pela maré”.
+            </p>
+        </div>
+    </section>
+
+    <!-- HÁBITOS 4, 5, 6 -->
+    <div class="banner">
+        HÁBITOS 4, 5 E 6 • <span>VOCÊ COM OS OUTROS</span>
+    </div>
+
+    <section class="section reverse">
+        <div class="text-block">
+            <h2>Vitória pública: melhorar relações e trabalho em equipe</h2>
+
+            <h3>Hábito 4 – Pense ganha/ganha</h3>
+            <p>
+                Em vez de pensar “se eu ganhar, o outro perde”, a ideia é:
+                “como podemos fazer para os dois saírem bem dessa situação?”.
+            </p>
+            <p><strong>Exemplo:</strong>  
+                Cliente pede desconto alto demais.  
+                Em vez de dizer só “sim” (e sair no prejuízo) ou só “não” (e perder o cliente),
+                você negocia prazo, volume, tipo de serviço até chegar num meio termo bom para ambos.
+            </p>
+
+            <h3>Hábito 5 – Procure primeiro compreender, depois ser compreendido</h3>
+            <p>
+                A maior parte das discussões nasce porque ninguém realmente escuta.
+                Esse hábito é sobre ouvir de verdade antes de tentar convencer.
+            </p>
+            <p><strong>Exemplo:</strong></p>
+            <ul>
+                <li>Um colaborador está rendendo pouco. Em vez de já brigar, você pergunta o que está acontecendo, escuta sem interromper, repete com suas palavras, e só depois mostra o que precisa mudar.</li>
+            </ul>
+
+            <h3>Hábito 6 – Crie sinergia</h3>
+            <p>
+                Sinergia é quando a soma das pessoas é maior do que cada uma separada.  
+                É usar as diferenças como força, não como problema.
+            </p>
+            <p><strong>Exemplo:</strong></p>
+            <ul>
+                <li>Uma pessoa é ótima em dados, outra em falar com cliente e outra em organização.  
+                    Se cada uma usar seu ponto forte, o resultado do time é muito mais alto.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <strong>Resumo da vitória pública:</strong>
+            <ul>
+                <li>Eu procuro acordos bons para mim, para o outro e para o negócio.</li>
+                <li>Eu escuto antes de responder ou julgar.</li>
+                <li>Eu valorizo as diferenças de cada pessoa e uso isso a favor do time.</li>
+            </ul>
+            <p>
+                Com isso, os relacionamentos ficam mais fortes e os conflitos diminuem bastante.
+            </p>
+        </div>
+    </section>
+
+    <!-- HÁBITO 7 -->
+    <div class="banner">
+        HÁBITO 7 • <span>RENOVAÇÃO CONTÍNUA</span>
+    </div>
+
+    <section class="section">
+        <div class="text-block">
+            <h2>Hábito 7 – Afine o instrumento</h2>
+            <p>
+                “Afinar o instrumento” significa cuidar de você mesmo.  
+                Se você não se cuida, chega uma hora em que o corpo, a mente ou 
+                as emoções cobram a conta.
+            </p>
+            <p>Covey fala de quatro áreas importantes:</p>
+            <ul>
+                <li><strong>Corpo:</strong> sono, alimentação, movimento, descanso.</li>
+                <li><strong>Mente:</strong> aprender, ler, estudar, ter novas ideias.</li>
+                <li><strong>Emoções/social:</strong> família, amigos, colegas, respeito, conversa sincera.</li>
+                <li><strong>Espiritual:</strong> valores, fé, propósito, aquilo que dá sentido à sua vida.</li>
+            </ul>
+            <p>
+                Você não precisa fazer nada gigantesco.  
+                Pequenos hábitos diários já ajudam muito:
+            </p>
+            <ul>
+                <li>caminhar 20 minutos por dia;</li>
+                <li>ler algo útil 10 minutos por dia;</li>
+                <li>ter um momento de conversa verdadeira com alguém importante;</li>
+                <li>parar alguns minutos para pensar na vida, agradecer e revisar o dia.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <strong>Imagem mental:</strong><br><br>
+            Pense em você como o principal “equipamento” da sua própria vida.  
+            Se esse equipamento falhar, nada funciona direito:  
+            trabalho, família, dinheiro, projetos, tudo sente o impacto.  
+            <br><br>
+            Por isso, cuidar de você não é egoísmo.  
+            É responsabilidade.
+        </div>
+    </section>
+
+    <!-- OBJETIVO FINAL -->
+    <div class="banner">
+        OBJETIVO FINAL DO LIVRO • <span>NA VIDA REAL</span>
+    </div>
+
+    <section>
         <div class="grid">
             <div class="grid-item">
-                <h3>Na Vida</h3>
-                <p>Mais calma, mais foco, menos bagunça mental.</p>
+                <h3>Na sua vida</h3>
+                <p>
+                    • Você passa a ter mais clareza sobre o que quer.<br>
+                    • Aprende a dizer “não” para o que atrapalha.<br>
+                    • Sente menos culpa e menos sensação de “desorganização interna”.<br>
+                    • Começa a ver progresso real, mesmo que devagar.
+                </p>
             </div>
 
             <div class="grid-item">
-                <h3>No Trabalho</h3>
-                <p>Menos retrabalho, mais planejamento, mais eficiência.</p>
+                <h3>No trabalho</h3>
+                <p>
+                    • Menos correria sem planejamento, mais rotina bem pensada.<br>
+                    • Menos conflito bobo, mais conversa direta e respeitosa.<br>
+                    • Mais foco no que realmente traz resultado.<br>
+                    • Equipes mais maduras, que assumem responsabilidade.
+                </p>
             </div>
 
             <div class="grid-item">
-                <h3>Nos Relacionamentos</h3>
-                <p>Menos conflito, mais diálogo, mais confiança.</p>
+                <h3>Nos relacionamentos</h3>
+                <p>
+                    • Você briga menos e escuta mais.<br>
+                    • Aprende a se colocar sem desrespeitar.<br>
+                    • Constrói confiança aos poucos, com atitudes consistentes.<br>
+                    • Sente o ambiente mais leve, em casa e no trabalho.
+                </p>
             </div>
 
             <div class="grid-item">
-                <h3>Em Você</h3>
-                <p>Mais responsabilidade, mais clareza, mais evolução pessoal.</p>
+                <h3>Em você mesmo</h3>
+                <p>
+                    • Você se sente mais dono da própria história.<br>
+                    • Entende que erros fazem parte do aprendizado.<br>
+                    • Cria coragem para mudar o que precisa ser mudado.<br>
+                    • Ganha mais paz com quem você é e com o caminho que está seguindo.
+                </p>
             </div>
 
             <div class="grid-item">
-                <h3>Ganhos Reais</h3>
-                <p>Resultados mais consistentes em todas as áreas.</p>
+                <h3>Ganhos práticos</h3>
+                <p>
+                    • Menos retrabalho, menos desgaste emocional.<br>
+                    • Mais previsibilidade, menos surpresa ruim.<br>
+                    • Mais energia para o que realmente importa.<br>
+                    • Vida mais alinhada com seus valores.
+                </p>
             </div>
 
             <div class="grid-item">
-                <h3>Frase Final</h3>
-                <p>“Mudando seus hábitos, você muda sua vida inteira.”</p>
+                <h3>Frase final</h3>
+                <p>
+                    O objetivo do livro é ajudar qualquer pessoa – independente de escolaridade,
+                    cargo ou idade – a viver de forma mais simples, organizada e com sentido.
+                    Um hábito de cada vez, um passo de cada vez.
+                </p>
             </div>
         </div>
     </section>
@@ -255,7 +580,8 @@
 </main>
 
 <footer>
-    Resumo baseado no livro “Os 7 Hábitos das Pessoas Altamente Eficazes”.
+    Resumo, insights, aprendizados e exemplos baseados no livro
+    “Os 7 Hábitos das Pessoas Altamente Eficazes”.
 </footer>
 
 </body>
