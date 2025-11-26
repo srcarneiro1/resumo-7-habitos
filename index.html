@@ -3,99 +3,93 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Os 7 Hábitos – Resumo Moderno</title>
+<title>Os 7 Hábitos – Página Estilo Template</title>
 
 <style>
     :root {
+        --black: #111111;
         --dark: #1c1c1c;
         --blue: #1b4f72;
-        --blue-light: #3498db;
+        --blue-light: #2980b9;
         --white: #ffffff;
-        --gray: #f2f2f2;
+        --gray: #f8f8f8;
     }
 
     body {
         margin: 0;
-        font-family: "Segoe UI", Arial, sans-serif;
+        font-family: "Segoe UI", Arial, Helvetica, sans-serif;
         background: var(--gray);
-        color: #333;
         line-height: 1.7;
+        color: #333;
     }
 
-    /* Topo */
+    /* Header preto top igual modelo */
     header {
-        background: var(--dark);
-        padding: 40px;
-        text-align: center;
+        background: var(--black);
         color: var(--white);
-        font-size: 22px;
-        letter-spacing: 2px;
+        padding: 40px 0;
+        text-align: center;
+        font-size: 20px;
+        letter-spacing: 3px;
         font-weight: 600;
     }
 
+    /* Seção estilo texto + card */
     .section {
-        max-width: 1100px;
-        margin: 60px auto;
-        padding: 40px;
+        max-width: 1000px;
+        margin: 80px auto;
+        display: flex;
+        gap: 40px;
+        align-items: center;
+        padding: 0 40px;
     }
 
-    .title {
-        font-size: 38px;
+    .section h2 {
+        font-size: 40px;
+        letter-spacing: 2px;
         font-weight: 700;
-        color: var(--blue);
-        letter-spacing: 1px;
-        margin-bottom: 10px;
-        text-align: left;
+        color: var(--black);
     }
 
-    /* Bloco curvado estilo modelo */
+    .section-text {
+        flex: 1;
+    }
+
+    /* CARD curvado preto */
     .card {
-        background: var(--dark);
+        flex: 1;
+        background: var(--black);
         color: var(--white);
         padding: 40px;
         border-radius: 50px 0 50px 0;
-        width: 55%;
-        float: right;
-        margin: 20px 0;
+        font-size: 16px;
     }
 
-    .card-left {
-        float: left;
-        border-radius: 0 50px 0 50px;
-    }
-
-    .highlight-section {
+    /* Faixas coloridas estilo BODY PUMP */
+    .banner {
         background: var(--blue-light);
-        padding: 80px 40px;
-        text-align: center;
         color: var(--white);
-        font-size: 28px;
+        padding: 100px 20px;
+        text-align: center;
+        font-size: 35px;
         font-weight: 700;
         letter-spacing: 2px;
-        margin: 80px 0;
+        margin: 100px 0;
     }
 
-    .clear {
-        clear: both;
+    /* Alternância de lados */
+    .reverse {
+        flex-direction: row-reverse;
     }
-
-    h3 {
-        font-size: 26px;
-        color: var(--blue);
-        margin-top: 40px;
-    }
-
-    ul, ol { margin-left: 25px; }
 
     footer {
-        background: var(--dark);
-        color: var(--white);
-        padding: 40px;
-        text-align: center;
         margin-top: 100px;
+        background: var(--black);
+        color: var(--white);
+        padding: 60px;
+        text-align: center;
         font-size: 14px;
     }
-
 </style>
 </head>
 
@@ -105,87 +99,136 @@
     OS 7 HÁBITOS DAS PESSOAS ALTAMENTE EFICAZES
 </header>
 
+<!-- SEÇÃO 1 -->
 <div class="section">
-    <h1 class="title">Resumo Geral</h1>
-
-    <div class="card">
-        O livro propõe uma transformação real por meio da mudança de dentro para fora.
-        Você aprende a agir com propósito, priorizar o que importa, melhorar relações
-        e renovar sua energia continuamente.
+    <div class="section-text">
+        <h2>PROPÓSITO</h2>
+        <p>
+            O livro ensina transformação real através de princípios, não técnicas rápidas.
+            A mudança começa dentro — foco, disciplina, clareza e responsabilidade.
+        </p>
     </div>
-
-    <div class="clear"></div>
+    <div class="card">
+        “A eficácia verdadeira vem de alinhar decisões diárias com valores profundos.”
+    </div>
 </div>
 
-<div class="highlight-section">
+<!-- BANNER -->
+<div class="banner">
     OS 7 HÁBITOS
 </div>
 
-<div class="section">
-
-    <h3>1. Seja Proativo</h3>
-    <div class="card card-left">
-        A capacidade de escolher suas respostas. Você não reage — você decide.
+<!-- BLOCO 1 -->
+<div class="section reverse">
+    <div class="section-text">
+        <h2>PROATIVIDADE</h2>
+        <p>
+            O hábito 1 lembra que você escolhe suas respostas.
+            Proatividade é assumir responsabilidade e parar de viver reagindo.
+        </p>
     </div>
-    <div class="clear"></div>
-
-    <h3>2. Comece com o Objetivo em Mente</h3>
     <div class="card">
-        Clareza total de propósito e direção. Uma vida guiada por missão pessoal.
+        Você não reage ao mundo.  
+        Você cria a sua realidade.
     </div>
-    <div class="clear"></div>
-
-    <h3>3. Primeiro o Mais Importante</h3>
-    <div class="card card-left">
-        Organização baseada no importante, não no urgente. Vida com foco real.
-    </div>
-    <div class="clear"></div>
-
-    <h3>4. Pense Ganha/Ganha</h3>
-    <div class="card">
-        A busca por acordos onde todos ganham, fortalecendo relações e resultados.
-    </div>
-    <div class="clear"></div>
-
-    <h3>5. Procure Primeiro Compreender</h3>
-    <div class="card card-left">
-        A escuta empática como base de toda boa comunicação.
-    </div>
-    <div class="clear"></div>
-
-    <h3>6. Crie Sinergia</h3>
-    <div class="card">
-        Unir forças e diferenças para alcançar resultados extraordinários.
-    </div>
-    <div class="clear"></div>
-
-    <h3>7. Afine o Instrumento</h3>
-    <div class="card card-left">
-        Renovação contínua física, emocional, mental e espiritual.
-    </div>
-    <div class="clear"></div>
-
 </div>
 
-<div class="highlight-section">
-    RESULTADOS DA APLICAÇÃO
+<!-- BLOCO 2 -->
+<div class="section">
+    <div class="section-text">
+        <h2>OBJETIVO EM MENTE</h2>
+        <p>
+            Clareza total sobre o destino desejado.  
+            Uma vida guiada pela missão pessoal, não por impulsos.
+        </p>
+    </div>
+    <div class="card">
+        “Quem não sabe para onde vai, aceita qualquer caminho.”
+    </div>
 </div>
 
-<div class="section">
-    <div class="card">
-        • Mais clareza  
-        • Mais tranquilidade  
-        • Mais produtividade  
-        • Relações mais fortes  
-        • Liderança mais madura  
-        • Crescimento duradouro  
+<!-- BLOCO 3 -->
+<div class="section reverse">
+    <div class="section-text">
+        <h2>PRIORIZE O IMPORTANTE</h2>
+        <p>
+            Aqui entra o <strong>Quadrante II</strong> — o território onde acontecem
+            planejamento, aprendizado, saúde, desenvolvimento e prevenção.
+        </p>
     </div>
-    <div class="clear"></div>
+    <div class="card">
+        Quadrante II:  
+        O lugar onde líderes vivem.
+    </div>
+</div>
+
+<!-- BANNER -->
+<div class="banner">
+    RELACIONAMENTOS & LIDERANÇA
+</div>
+
+<!-- BLOCO 4 -->
+<div class="section">
+    <div class="section-text">
+        <h2>GANHA/GANHA</h2>
+        <p>
+            Mentes maduras buscam acordos sustentáveis e relações de confiança.
+        </p>
+    </div>
+    <div class="card">
+        Cooperar > competir.
+    </div>
+</div>
+
+<!-- BLOCO 5 -->
+<div class="section reverse">
+    <div class="section-text">
+        <h2>ESCUTA EMPÁTICA</h2>
+        <p>
+            Ouvir para entender — antes de influenciar.
+        </p>
+    </div>
+    <div class="card">
+        Comunicação verdadeira começa pela escuta.
+    </div>
+</div>
+
+<!-- BLOCO 6 -->
+<div class="section">
+    <div class="section-text">
+        <h2>SINERGIA</h2>
+        <p>
+            O todo se torna maior
+            do que a soma das partes quando valorizamos as diferenças.
+        </p>
+    </div>
+    <div class="card">
+        1 + 1 pode ser 3.
+    </div>
+</div>
+
+<!-- BANNER -->
+<div class="banner">
+    RENOVAÇÃO CONSTANTE
+</div>
+
+<!-- BLOCO 7 -->
+<div class="section reverse">
+    <div class="section-text">
+        <h2>AFINE O INSTRUMENTO</h2>
+        <p>
+            Renovação física, mental, emocional e espiritual.  
+            O hábito que sustenta os outros.
+        </p>
+    </div>
+    <div class="card">
+        Crescer sempre.  
+        Nunca parar.
+    </div>
 </div>
 
 <footer>
-    Página criada para fins de estudo — Design inspirado no modelo enviado.<br>
-    Desenvolvido por Filipe Carneiro.
+    Desenvolvido para estudo – Layout inspirado conforme solicitado.
 </footer>
 
 </body>
