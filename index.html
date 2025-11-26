@@ -6,173 +6,234 @@
   <title>Resumo – Os 7 Hábitos das Pessoas Altamente Eficazes</title>
 
   <style>
+    :root {
+      --bg: #f0f2f5;
+      --card-bg: #ffffff;
+      --text: #333;
+      --primary: #2d6cdf;
+      --primary-dark: #1c49a5;
+      --accent: #6c63ff;
+      --radius: 12px;
+      --shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+
     body {
-      font-family: Arial, Helvetica, sans-serif;
       margin: 0;
-      padding: 40px;
-      background: #f5f5f5;
-      color: #333;
-      line-height: 1.6;
-    }
-
-    h1, h2, h3 {
-      color: #222;
-    }
-
-    a {
-      color: #0066cc;
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
+      padding: 0;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
     }
 
     .container {
       max-width: 900px;
-      margin: auto;
-      background: #ffffff;
+      margin: 40px auto;
+      background: var(--card-bg);
       padding: 40px;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
     }
 
-    hr {
-      margin: 40px 0;
-      border: none;
-      border-bottom: 1px solid #ccc;
+    h1 {
+      margin-top: 0;
+      text-align: center;
+      font-size: 34px;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    h2 {
+      margin-top: 40px;
+      font-size: 26px;
+      color: var(--primary-dark);
+      border-left: 6px solid var(--primary);
+      padding-left: 10px;
+    }
+
+    h3 {
+      margin-top: 30px;
+      font-size: 22px;
+      color: #444;
     }
 
     ul, ol {
-      margin-left: 20px;
+      margin-left: 25px;
     }
+
+    .pdf-btn {
+      display: inline-block;
+      padding: 14px 24px;
+      background: var(--primary);
+      color: white;
+      font-size: 18px;
+      border-radius: var(--radius);
+      text-decoration: none;
+      font-weight: 600;
+      margin: 15px 0;
+      transition: 0.2s;
+    }
+
+    .pdf-btn:hover {
+      background: var(--primary-dark);
+      transform: scale(1.03);
+    }
+
+    hr {
+      border: none;
+      height: 1px;
+      background: #ddd;
+      margin: 40px 0;
+    }
+
+    .divider {
+      width: 80px;
+      height: 4px;
+      background: var(--accent);
+      border-radius: 10px;
+      margin: 20px auto;
+    }
+
+    .intro {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 18px;
+    }
+
+    @media (max-width: 700px) {
+      .container {
+        padding: 25px;
+      }
+      h1 {
+        font-size: 28px;
+      }
+      .pdf-btn {
+        width: 100%;
+        text-align: center;
+      }
+    }
+
   </style>
 </head>
 
 <body>
+
   <div class="container">
 
-    <h1>Resumo do livro <em>Os 7 Hábitos das Pessoas Altamente Eficazes</em></h1>
+    <h1>Resumo — Os 7 Hábitos das Pessoas Altamente Eficazes</h1>
 
-    <p>
-      📘 
-      <strong>
-        <a href="Os 7 Habitos das Pessoas Altame - Stephen R. Covey.pdf" target="_blank" rel="noopener noreferrer">
-          Clique aqui para abrir o PDF do livro
-        </a>
-      </strong>
+    <div class="divider"></div>
+
+    <p class="intro">
+      Um dos maiores clássicos de desenvolvimento pessoal e profissional, escrito por Stephen R. Covey.
       <br>
-      <small>(Certifique-se de enviar o PDF para o mesmo repositório do GitHub, com esse mesmo nome)</small>
+      Aqui está um resumo completo, objetivo e fácil de navegar.
     </p>
 
-    <p>
-      O livro apresenta um modelo de desenvolvimento pessoal baseado em princípios eternos,
-      como responsabilidade, integridade, cooperação e renovação. Diferente de métodos rápidos,
-      Covey ensina um processo profundo de mudança <strong>de dentro para fora</strong>.
-    </p>
+    <a class="pdf-btn" href="Os 7 Habitos das Pessoas Altame - Stephen R. Covey.pdf" target="_blank">
+      📘 Abrir PDF Original do Livro
+    </a>
 
     <h2>Objetivo do Livro</h2>
     <p>
-      O objetivo é transformar você em uma pessoa eficaz, capaz de:
+      O objetivo é transformar você em uma pessoa altamente eficaz, capaz de:
     </p>
 
     <ul>
-      <li>agir com propósito e valores;</li>
-      <li>priorizar o importante em vez do urgente;</li>
-      <li>desenvolver relações fortes e colaborativas;</li>
-      <li>renovar-se continuamente;</li>
-      <li>ter resultados sustentáveis na vida pessoal e profissional.</li>
+      <li>viver com propósito e clareza;</li>
+      <li>agir com proatividade e responsabilidade;</li>
+      <li>construir relações fortes e cooperativas;</li>
+      <li>focar no que realmente importa;</li>
+      <li>crescer continuamente em todas as áreas da vida.</li>
     </ul>
 
-    <hr />
+    <hr>
 
-    <h2>Os 7 Hábitos – Visão Geral</h2>
+    <h2>Os 7 Hábitos (Visão Geral)</h2>
     <ol>
-      <li><strong>Seja Proativo</strong></li>
-      <li><strong>Comece com o Objetivo em Mente</strong></li>
-      <li><strong>Primeiro o Mais Importante</strong></li>
-      <li><strong>Pense Ganha/Ganha</strong></li>
-      <li><strong>Procure Primeiro Compreender, Depois Ser Compreendido</strong></li>
-      <li><strong>Crie Sinergia</strong></li>
-      <li><strong>Afine o Instrumento</strong></li>
+      <li><strong>Seja Proativo</strong> — a mudança começa em você.</li>
+      <li><strong>Comece com o Objetivo em Mente</strong> — clareza de propósito.</li>
+      <li><strong>Primeiro o Mais Importante</strong> — priorize o essencial.</li>
+      <li><strong>Pense Ganha/Ganha</strong> — cooperação, não competição.</li>
+      <li><strong>Procure Primeiro Compreender</strong> — escuta empática.</li>
+      <li><strong>Crie Sinergia</strong> — somar forças.</li>
+      <li><strong>Afine o Instrumento</strong> — renovação contínua.</li>
     </ol>
 
-    <hr />
+    <hr>
 
     <h2>Resumo por Partes</h2>
 
     <h3>1. De dentro para fora</h3>
     <p>
-      Mudanças reais começam pela transformação do caráter, não por técnicas superficiais.
+      Covey afirma que mudanças duradouras começam pelo caráter, não por técnicas superficiais.
     </p>
 
     <h3>2. Vitória Particular</h3>
     <ul>
-      <li><strong>Hábito 1 – Proatividade:</strong> você escolhe suas respostas e resultados.</li>
-      <li><strong>Hábito 2 – Objetivo em mente:</strong> visão clara orienta decisões.</li>
-      <li><strong>Hábito 3 – Priorizar:</strong> foco no importante evita caos.</li>
+      <li><strong>Proatividade:</strong> assumir responsabilidade pelas próprias escolhas.</li>
+      <li><strong>Visão:</strong> definir missão pessoal e direção.</li>
+      <li><strong>Prioridades:</strong> cuidar do que importa antes do que “grita”.</li>
     </ul>
 
     <h3>3. Vitória Pública</h3>
     <ul>
-      <li><strong>Hábito 4 – Ganha/Ganha:</strong> cooperação sustentável.</li>
-      <li><strong>Hábito 5 – Escuta empática:</strong> entender antes de argumentar.</li>
-      <li><strong>Hábito 6 – Sinergia:</strong> somar forças diferentes.</li>
+      <li><strong>Ganha/Ganha:</strong> relações equilibradas.</li>
+      <li><strong>Escuta empática:</strong> compreender antes de ser compreendido.</li>
+      <li><strong>Sinergia:</strong> valorizar diferenças e multiplicar resultados.</li>
     </ul>
 
     <h3>4. Renovação</h3>
-    <ul>
-      <li><strong>Hábito 7 – Afine o Instrumento:</strong> cuide do físico, mental, emocional e espiritual.</li>
-    </ul>
+    <p>
+      Renovar corpo, mente, emoções e espírito para manter o crescimento.
+    </p>
 
-    <hr />
+    <hr>
 
     <h2>Insights Poderosos</h2>
     <ul>
-      <li>A verdadeira mudança é interna.</li>
-      <li>Proatividade é liberdade + responsabilidade.</li>
-      <li>Missão pessoal é seu “norte”.</li>
-      <li>Importante ≠ urgente.</li>
-      <li>Confiança é construída como um banco emocional.</li>
-      <li>Escuta empática é a chave da influência.</li>
-      <li>Sinergia gera inovação.</li>
-      <li>Renovação mantém você crescendo continuamente.</li>
+      <li>A proatividade é a base da liberdade humana.</li>
+      <li>Missão pessoal guia as decisões difíceis.</li>
+      <li>Viver no “importante” reduz estresse.</li>
+      <li>Escutar profundamente evita conflitos.</li>
+      <li>Sinergia cria resultados extraordinários.</li>
+      <li>Sem renovação, nenhum hábito se sustenta.</li>
     </ul>
 
-    <hr />
+    <hr>
 
-    <h2>Resultados Esperados ao Aplicar o Livro</h2>
+    <h2>Resultados Reais</h2>
 
     <h3>Vida pessoal</h3>
     <ul>
-      <li>Agenda equilibrada e produtiva.</li>
-      <li>Menos estresse, mais clareza.</li>
-      <li>Autodesenvolvimento contínuo.</li>
+      <li>menos ansiedade e mais clareza;</li>
+      <li>produtividade sustentável;</li>
+      <li>melhor equilíbrio entre vida e trabalho.</li>
     </ul>
 
     <h3>Relacionamentos</h3>
     <ul>
-      <li>Mais compreensão e menos conflito.</li>
-      <li>Confiança e cooperação.</li>
+      <li>comunicação madura;</li>
+      <li>menos conflito, mais confiança;</li>
+      <li>decisões mais inteligentes em conjunto.</li>
     </ul>
 
-    <h3>Carreira e liderança</h3>
+    <h3>Carreira</h3>
     <ul>
-      <li>Times mais colaborativos.</li>
-      <li>Comunicação clara e empática.</li>
-      <li>Inovação e resultados sustentáveis.</li>
+      <li>liderança mais humana e eficaz;</li>
+      <li>ambientes colaborativos;</li>
+      <li>resolução de problemas mais criativa.</li>
     </ul>
 
-    <hr />
+    <hr>
 
     <h2>Como Aplicar na Prática</h2>
     <ul>
-      <li>Pratique 1 hábito por semana ou por mês.</li>
-      <li>Defina sua missão pessoal.</li>
-      <li>Organize sua semana pelo Quadrante II.</li>
-      <li>Busque ganha/ganha nas relações.</li>
-      <li>Crie um ritual semanal de renovação.</li>
+      <li>Trabalhe um hábito por vez.</li>
+      <li>Crie ou revise sua missão pessoal.</li>
+      <li>Planeje a semana pelo Quadrante II.</li>
+      <li>Pratique escuta empática.</li>
+      <li>Cultive rituais de renovação.</li>
     </ul>
 
   </div>
