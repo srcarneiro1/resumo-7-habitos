@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Os 7 Hábitos – Página Estilo Template</title>
+<title>Os 7 Hábitos – Resumo e Insights</title>
 
 <style>
     :root {
@@ -23,7 +23,6 @@
         color: #333;
     }
 
-    /* Header preto top igual modelo */
     header {
         background: var(--black);
         color: var(--white);
@@ -34,7 +33,6 @@
         font-weight: 600;
     }
 
-    /* Seção estilo texto + card */
     .section {
         max-width: 1000px;
         margin: 80px auto;
@@ -45,39 +43,43 @@
     }
 
     .section h2 {
-        font-size: 40px;
+        font-size: 36px;
         letter-spacing: 2px;
         font-weight: 700;
         color: var(--black);
+        margin-bottom: 10px;
     }
 
     .section-text {
         flex: 1;
+        font-size: 16px;
     }
 
-    /* CARD curvado preto */
+    .section-text ul {
+        margin-left: 20px;
+        margin-top: 10px;
+    }
+
     .card {
         flex: 1;
         background: var(--black);
         color: var(--white);
         padding: 40px;
         border-radius: 50px 0 50px 0;
-        font-size: 16px;
+        font-size: 15px;
     }
 
-    /* Faixas coloridas estilo BODY PUMP */
     .banner {
         background: var(--blue-light);
         color: var(--white);
         padding: 100px 20px;
         text-align: center;
-        font-size: 35px;
+        font-size: 32px;
         font-weight: 700;
         letter-spacing: 2px;
         margin: 100px 0;
     }
 
-    /* Alternância de lados */
     .reverse {
         flex-direction: row-reverse;
     }
@@ -90,6 +92,15 @@
         text-align: center;
         font-size: 14px;
     }
+
+    @media (max-width: 900px) {
+        .section {
+            flex-direction: column;
+        }
+        .card {
+            border-radius: 30px;
+        }
+    }
 </style>
 </head>
 
@@ -99,136 +110,144 @@
     OS 7 HÁBITOS DAS PESSOAS ALTAMENTE EFICAZES
 </header>
 
-<!-- SEÇÃO 1 -->
+<!-- SEÇÃO: RESUMO DO LIVRO -->
 <div class="section">
     <div class="section-text">
-        <h2>PROPÓSITO</h2>
+        <h2>RESUMO DO LIVRO</h2>
         <p>
-            O livro ensina transformação real através de princípios, não técnicas rápidas.
-            A mudança começa dentro — foco, disciplina, clareza e responsabilidade.
+            <strong>Os 7 Hábitos das Pessoas Altamente Eficazes</strong>, de Stephen R. Covey,
+            apresenta um modelo de desenvolvimento pessoal e profissional baseado em
+            <strong>princípios</strong>, não em truques rápidos. O autor propõe uma mudança
+            <em>de dentro para fora</em>: primeiro transformar caráter, mentalidade e hábitos,
+            depois colher resultados melhores em trabalho, família e vida em geral.
         </p>
+        <p>
+            O livro é dividido em três partes:
+        </p>
+        <ul>
+            <li><strong>Vitória particular</strong> – você desenvolve autocontrole, propósito e disciplina (hábitos 1, 2 e 3);</li>
+            <li><strong>Vitória pública</strong> – constrói relacionamentos de confiança e cooperação (hábitos 4, 5 e 6);</li>
+            <li><strong>Renovação contínua</strong> – mantém tudo isso vivo ao longo do tempo (hábito 7).</li>
+        </ul>
     </div>
     <div class="card">
-        “A eficácia verdadeira vem de alinhar decisões diárias com valores profundos.”
+        RESUMO EM UMA FRASE:<br><br>
+        “Torne-se uma pessoa guiada por princípios,
+        que escolhe suas respostas, sabe para onde está indo,
+        organiza o tempo pelo que é importante, constrói relações ganha/ganha
+        e se renova continuamente.”
     </div>
 </div>
 
-<!-- BANNER -->
+<!-- SEÇÃO: PRINCIPAIS INSIGHTS -->
 <div class="banner">
-    OS 7 HÁBITOS
+    PRINCIPAIS INSIGHTS & PONTOS RELEVANTES
 </div>
 
-<!-- BLOCO 1 -->
 <div class="section reverse">
     <div class="section-text">
-        <h2>PROATIVIDADE</h2>
-        <p>
-            O hábito 1 lembra que você escolhe suas respostas.
-            Proatividade é assumir responsabilidade e parar de viver reagindo.
-        </p>
+        <h2>INSIGHTS CENTRAIS</h2>
+        <ul>
+            <li><strong>De dentro para fora:</strong> tentar mudar só o exterior gera resultados superficiais.</li>
+            <li><strong>Proatividade:</strong> sempre existe um espaço entre o que acontece e a forma como você reage.</li>
+            <li><strong>Missão pessoal:</strong> ter clareza de propósito facilita dizer “sim” e “não” com segurança.</li>
+            <li><strong>Importante x urgente:</strong> viver só no urgente desgasta; viver no importante constrói futuro.</li>
+            <li><strong>Conta bancária emocional:</strong> confiança é construída aos poucos, com pequenos “depósitos”.</li>
+            <li><strong>Abundância:</strong> há espaço para todos crescerem; não precisa ganhar às custas dos outros.</li>
+        </ul>
     </div>
     <div class="card">
-        Você não reage ao mundo.  
-        Você cria a sua realidade.
+        APRENDIZADO-CHAVE:<br><br>
+        Pessoas altamente eficazes não são as mais “ocupadas”, mas as que
+        <strong>agem guiadas por valores</strong>, investem tempo no que é importante
+        e constroem relações sólidas.
     </div>
 </div>
 
-<!-- BLOCO 2 -->
-<div class="section">
-    <div class="section-text">
-        <h2>OBJETIVO EM MENTE</h2>
-        <p>
-            Clareza total sobre o destino desejado.  
-            Uma vida guiada pela missão pessoal, não por impulsos.
-        </p>
-    </div>
-    <div class="card">
-        “Quem não sabe para onde vai, aceita qualquer caminho.”
-    </div>
-</div>
-
-<!-- BLOCO 3 -->
-<div class="section reverse">
-    <div class="section-text">
-        <h2>PRIORIZE O IMPORTANTE</h2>
-        <p>
-            Aqui entra o <strong>Quadrante II</strong> — o território onde acontecem
-            planejamento, aprendizado, saúde, desenvolvimento e prevenção.
-        </p>
-    </div>
-    <div class="card">
-        Quadrante II:  
-        O lugar onde líderes vivem.
-    </div>
-</div>
-
-<!-- BANNER -->
+<!-- BANNER: OS 7 HÁBITOS -->
 <div class="banner">
-    RELACIONAMENTOS & LIDERANÇA
+    OS 7 HÁBITOS NA PRÁTICA
 </div>
 
-<!-- BLOCO 4 -->
+<!-- BLOCO: HÁBITOS 1, 2, 3 -->
 <div class="section">
     <div class="section-text">
-        <h2>GANHA/GANHA</h2>
+        <h2>VITÓRIA PARTICULAR</h2>
+        <p><strong>Hábito 1 – Seja Proativo:</strong> você escolhe suas respostas, em vez de culpar pessoas e circunstâncias.</p>
+        <p><strong>Hábito 2 – Comece com o Objetivo em Mente:</strong> define missão e direção antes de agir.</p>
         <p>
-            Mentes maduras buscam acordos sustentáveis e relações de confiança.
+            <strong>Hábito 3 – Primeiro o Mais Importante:</strong>
+            aqui entra o famoso <strong>Quadrante II</strong> – atividades
+            <em>importantes, mas não urgentes</em>, como planejamento, estudos, saúde,
+            melhoria de processos e tempo de qualidade com pessoas importantes.
+        </p>
+        <p>
+            Quem vive no Quadrante II evita crises, cresce de forma consistente
+            e sente que a vida está “no eixo”.
         </p>
     </div>
     <div class="card">
-        Cooperar > competir.
+        EXEMPLOS PRÁTICOS:<br><br>
+        • Reservar tempo semanal para planejamento e estudo;<br>
+        • Cuidar da saúde antes de ter um problema sério;<br>
+        • Criar processos para reduzir erros, em vez de só apagar incêndio;<br>
+        • Conversar com a equipe ou família antes que o conflito exploda.
     </div>
 </div>
 
-<!-- BLOCO 5 -->
+<!-- BLOCO: HÁBITOS 4, 5, 6 -->
 <div class="section reverse">
     <div class="section-text">
-        <h2>ESCUTA EMPÁTICA</h2>
-        <p>
-            Ouvir para entender — antes de influenciar.
-        </p>
+        <h2>VITÓRIA PÚBLICA</h2>
+        <p><strong>Hábito 4 – Pense Ganha/Ganha:</strong> busca soluções onde todos se beneficiam, ou “ganha/ganha ou nada feito”.</p>
+        <p><strong>Hábito 5 – Procure Primeiro Compreender, Depois Ser Compreendido:</strong> pratica escuta empática antes de querer convencer.</p>
+        <p><strong>Hábito 6 – Crie Sinergia:</strong> valoriza as diferenças e combina talentos para resultados maiores que a soma das partes.</p>
     </div>
     <div class="card">
-        Comunicação verdadeira começa pela escuta.
+        APRENDIZADOS RELACIONAIS:<br><br>
+        • Em vez de “vencer discussões”, você busca acordos duradouros;<br>
+        • Ouvir de verdade muda a qualidade das conversas;<br>
+        • Times diversos, quando bem conduzidos, criam soluções muito superiores.
     </div>
 </div>
 
-<!-- BLOCO 6 -->
-<div class="section">
-    <div class="section-text">
-        <h2>SINERGIA</h2>
-        <p>
-            O todo se torna maior
-            do que a soma das partes quando valorizamos as diferenças.
-        </p>
-    </div>
-    <div class="card">
-        1 + 1 pode ser 3.
-    </div>
-</div>
-
-<!-- BANNER -->
+<!-- BANNER: RENOVAÇÃO -->
 <div class="banner">
-    RENOVAÇÃO CONSTANTE
+    RENOVAÇÃO CONTÍNUA
 </div>
 
-<!-- BLOCO 7 -->
-<div class="section reverse">
+<!-- BLOCO: HÁBITO 7 + OBJETIVO FINAL NA PRÁTICA -->
+<div class="section">
     <div class="section-text">
-        <h2>AFINE O INSTRUMENTO</h2>
+        <h2>HÁBITO 7 – AFINE O INSTRUMENTO</h2>
         <p>
-            Renovação física, mental, emocional e espiritual.  
-            O hábito que sustenta os outros.
+            Covey mostra que, para sustentar todos os outros hábitos,
+            você precisa se renovar em quatro dimensões:
         </p>
+        <ul>
+            <li><strong>Física:</strong> sono, alimentação, exercícios;</li>
+            <li><strong>Mental:</strong> leitura, estudo, aprendizado contínuo;</li>
+            <li><strong>Social/Emocional:</strong> relações saudáveis, respeito, serviço;</li>
+            <li><strong>Espiritual:</strong> valores, propósito, conexão com algo maior.</li>
+        </ul>
     </div>
     <div class="card">
-        Crescer sempre.  
-        Nunca parar.
+        OBJETIVO FINAL NA PRÁTICA:<br><br>
+        Formar uma pessoa que:
+        <ul>
+            <li>sabe quem é e para onde está indo;</li>
+            <li>organiza o tempo em função do que é realmente importante;</li>
+            <li>assume responsabilidade pelos próprios resultados;</li>
+            <li>constrói relacionamentos de confiança e ganha/ganha;</li>
+            <li>mantém um ciclo constante de crescimento e renovação.</li>
+        </ul>
+        Esse é o “produto final” do livro.
     </div>
 </div>
 
 <footer>
-    Desenvolvido para estudo – Layout inspirado conforme solicitado.
+    Resumo, insights, aprendizados e exemplos baseados em “Os 7 Hábitos das Pessoas Altamente Eficazes”.<br>
+    Página criada para fins de estudo.
 </footer>
 
 </body>
