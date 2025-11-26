@@ -5,424 +5,249 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Resumo do Livro: Os 7 Hábitos</title>
 
-<!-- Fonte Roboto (manual Unilog sugere Roboto para títulos e textos) -->
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 
 <style>
     :root {
         --cinza-unilog: #494a56;
         --vermelho-unilog: #db0812;
-        --azul-sec: #accfcc;
-        --amarelo-sec: #f2d750;
-        --branco: #ffffff;
-        --cinza-fundo: #f4f4f6;
+        --cinza-claro: #f7f7f8;
+        --cinza-clarissimo: #ffffff;
+        --cinza-texto: #666;
+        --shadow: 0 4px 20px rgba(0,0,0,0.08);
     }
 
-    * {
-        box-sizing: border-box;
-    }
-
+    * { box-sizing: border-box; }
     body {
         margin: 0;
         font-family: "Roboto", Arial, sans-serif;
-        background: var(--cinza-fundo);
-        color: #333;
-        line-height: 1.7;
+        background: var(--cinza-claro);
+        color: var(--cinza-texto);
+        line-height: 1.8;
     }
 
-    /* BARRA TOPO */
-    header {
-        background: var(--cinza-unilog);
-        color: var(--branco);
-        padding: 22px 30px;
+    /* HERO SECTION (estilo da imagem) */
+    .hero {
+        background: var(--cinza-clarissimo);
+        padding: 80px 20px;
         text-align: center;
-        letter-spacing: 2px;
-        font-weight: 700;
-        font-size: 18px;
+        box-shadow: 0 1px 10px rgba(0,0,0,0.05);
     }
 
-    header span {
+    .hero h1 {
+        font-size: 44px;
+        color: var(--cinza-unilog);
+        margin-bottom: 15px;
+        font-weight: 700;
+        line-height: 1.2;
+    }
+
+    .hero h1 span {
         color: var(--vermelho-unilog);
     }
 
+    .hero p {
+        font-size: 18px;
+        max-width: 650px;
+        margin: 0 auto;
+    }
+
+    /* ÁREA DE CONTEÚDO */
     main {
         max-width: 1100px;
-        margin: 0 auto 80px auto;
-        padding: 40px 20px 0 20px;
+        margin: auto;
+        padding: 40px 20px;
     }
 
-    /* SEÇÕES EM BLOCOS */
+    /* Seções suaves alternadas */
     .section {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 40px;
-        margin: 70px 0;
-    }
-
-    .section.reverse {
-        flex-direction: row-reverse;
-    }
-
-    .text-block {
-        flex: 1;
-    }
-
-    .text-block h2 {
-        font-size: 30px;
-        margin: 0 0 10px 0;
-        letter-spacing: 1px;
-        color: var(--cinza-unilog);
-        text-transform: uppercase;
-    }
-
-    .text-block p,
-    .text-block ul {
-        font-size: 15px;
-    }
-
-    .text-block ul {
-        padding-left: 18px;
-        margin: 8px 0;
-    }
-
-    .card {
-        flex: 1;
-        background: var(--cinza-unilog);
-        color: var(--branco);
-        padding: 35px;
-        border-radius: 60px 0 60px 0; /* curva estilo template */
-        font-size: 14px;
-        box-shadow: 0 12px 25px rgba(0,0,0,0.2);
-    }
-
-    .card strong {
-        color: var(--amarelo-sec);
-    }
-
-    /* FAIXAS GRANDES */
-    .banner {
-        margin: 80px 0;
-        padding: 70px 20px;
-        text-align: center;
-        font-size: 26px;
-        font-weight: 700;
-        letter-spacing: 3px;
-        color: var(--branco);
-        background: linear-gradient(90deg, var(--vermelho-unilog), var(--cinza-unilog));
-        text-transform: uppercase;
-    }
-
-    .banner.blue {
-        background: linear-gradient(90deg, var(--azul-sec), var(--cinza-unilog));
-        color: var(--cinza-unilog);
-    }
-
-    /* BLOCO DE LISTA FINAL */
-    .grid {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 25px;
+        background: var(--cinza-clarissimo);
+        padding: 60px;
+        border-radius: 16px;
+        box-shadow: var(--shadow);
         margin: 40px 0;
     }
 
+    .section h2 {
+        font-size: 30px;
+        color: var(--cinza-unilog);
+        font-weight: 700;
+        margin-top: 0;
+    }
+
+    .section p, .section ul {
+        font-size: 16px;
+    }
+
+    /* Cards estilo template */
+    .card {
+        background: var(--cinza-unilog);
+        color: white;
+        padding: 28px;
+        border-radius: 18px;
+        margin-top: 20px;
+        line-height: 1.7;
+        box-shadow: var(--shadow);
+    }
+
+    .card strong {
+        color: var(--vermelho-unilog);
+    }
+
+    /* Grids */
+    .grid {
+        display: grid;
+        gap: 25px;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        margin-top: 35px;
+    }
+
     .grid-item {
-        background: var(--branco);
-        border-radius: 28px;
-        padding: 25px 22px;
-        box-shadow: 0 8px 18px rgba(0,0,0,0.08);
-        font-size: 14px;
+        background: white;
+        padding: 25px;
+        border-radius: 18px;
+        box-shadow: var(--shadow);
     }
 
     .grid-item h3 {
+        font-size: 20px;
         margin-top: 0;
-        font-size: 18px;
         color: var(--cinza-unilog);
-        text-transform: uppercase;
-        letter-spacing: 1px;
+        font-weight: 700;
     }
 
     footer {
-        background: var(--cinza-unilog);
-        color: var(--branco);
         text-align: center;
-        padding: 26px 15px;
-        font-size: 12px;
+        padding: 40px;
+        background: var(--cinza-unilog);
+        color: white;
         margin-top: 80px;
+        font-size: 14px;
     }
 
-    @media (max-width: 900px) {
-        .section,
-        .section.reverse {
-            flex-direction: column;
-        }
-        .card {
-            border-radius: 40px;
-        }
-        .grid {
-            grid-template-columns: 1fr;
-        }
+    @media (max-width: 800px) {
+        .hero h1 { font-size: 34px; }
+        .section { padding: 30px; }
     }
 </style>
 </head>
 
 <body>
 
-<header>
-    LEITURA GUIADA – <span>OS 7 HÁBITOS</span>
-</header>
+<!-- HERO SECTION -->
+<section class="hero">
+    <h1>
+        Os 7 Hábitos <span>Explicados de Maneira Simples</span>
+    </h1>
+    <p>Um guia direto, fácil e prático para entender o livro que transformou o jeito de trabalhar, pensar e viver.</p>
+</section>
 
 <main>
 
-    <!-- RESUMO GERAL, SUPER SIMPLES -->
+    <!-- SEÇÃO 1 -->
     <section class="section">
-        <div class="text-block">
-            <h2>Resumo bem simples</h2>
-            <p>
-                O livro <strong>“Os 7 Hábitos das Pessoas Altamente Eficazes”</strong> explica
-                como ser uma pessoa que funciona bem na vida e no trabalho.
-            </p>
-            <p>
-                Ele diz que a mudança começa <strong>dentro</strong>: na forma de pensar,
-                sentir e escolher. Primeiro você arruma a “cabeça e o coração”.
-                Depois, os resultados aparecem: menos confusão, menos estresse,
-                mais organização e relações melhores.
-            </p>
-            <p>
-                O autor mostra 7 hábitos (7 “costumes”) que, se praticados todo dia,
-                ajudam qualquer pessoa a:
-            </p>
-            <ul>
-                <li>assumir responsabilidade;</li>
-                <li>ter objetivos claros;</li>
-                <li>usar melhor o tempo;</li>
-                <li>se relacionar melhor com os outros;</li>
-                <li>e se cuidar para não “quebrar”.</li>
-            </ul>
-        </div>
+        <h2>Resumo Geral do Livro</h2>
+        <p>
+            O livro “Os 7 Hábitos das Pessoas Altamente Eficazes” ensina como qualquer pessoa 
+            pode ter uma vida mais organizada, tranquila e com melhores resultados.
+            Ele mostra que tudo começa dentro de você: seus pensamentos, atitudes e escolhas.
+        </p>
+        <p>
+            Quando você melhora seu jeito de agir, sua vida inteira melhora junto — trabalho, 
+            família, dinheiro, saúde, tudo.
+        </p>
 
         <div class="card">
-            <strong>Em uma frase:</strong><br><br>
-            O livro ensina a sair do modo “apagar incêndio”
-            e entrar no modo “vida organizada e com propósito”.
-            É como montar um bom processo logístico: primeiro desenha
-            o fluxo certo, depois a operação roda melhor.
+            <strong>Em resumo:</strong><br>
+            O livro ensina como parar de apagar incêndios e passar a viver com clareza, ordem e propósito.
         </div>
     </section>
 
-    <!-- BANNER PRINCIPAIS INSIGHTS -->
-    <div class="banner">
-        PRINCIPAIS INSIGHTS E PONTOS RELEVANTES
-    </div>
-
-    <!-- INSIGHTS EM LINGUAGEM FÁCIL -->
-    <section class="section reverse">
-        <div class="text-block">
-            <h2>Insights do livro</h2>
-            <ul>
-                <li><strong>De dentro para fora:</strong> não adianta só mudar planilha, rotina ou chefe. Se você não muda sua forma de pensar, tudo volta ao velho padrão.</li>
-                <li><strong>Você escolhe sua resposta:</strong> aquilo que acontece você não controla. Mas como reage, sim.</li>
-                <li><strong>Objetivo claro:</strong> quem sabe onde quer chegar toma decisões mais fáceis. Menos dúvida, menos arrependimento.</li>
-                <li><strong>Importante x urgente:</strong> viver só em urgência cansa. Cuidar das coisas importantes evita muita dor de cabeça depois.</li>
-                <li><strong>Confiança é depósito:</strong> cada palavra cumprida é um “depósito” na conta de confiança com alguém. Cada promessa quebrada é um “saque”.</li>
-                <li><strong>Todos podem ganhar:</strong> dá para pensar em soluções que funcionam bem para você, para o outro e para a empresa.</li>
-            </ul>
-        </div>
-
-        <div class="card">
-            <strong>Aprendizado para o dia a dia:</strong><br><br>
-            Se você organizar a vida como um centro de distribuição bem planejado,
-            tudo flui melhor: menos retrabalho, menos stress, menos conflito
-            e mais resultado.
-        </div>
-    </section>
-
-    <!-- BANNER HÁBITOS -->
-    <div class="banner blue">
-        OS 7 HÁBITOS EXPLICADOS DE FORMA BEM FÁCIL
-    </div>
-
-    <!-- VITÓRIA PARTICULAR -->
+    <!-- SEÇÃO 2 -->
     <section class="section">
-        <div class="text-block">
-            <h2>Hábitos 1, 2 e 3 – você com você</h2>
-            <p><strong>Hábito 1 – Seja Proativo</strong></p>
-            <p>
-                Proativo é assim: em vez de só reclamar, você faz algo.
-                Exemplo: em vez de reclamar do atraso do caminhão,
-                você cria um jeito melhor de acompanhar o trajeto.
-            </p>
+        <h2>Principais Insights</h2>
 
-            <p><strong>Hábito 2 – Comece com o objetivo em mente</strong></p>
-            <p>
-                É imaginar o “resultado final” antes de começar.
-                Exemplo: antes de organizar um estoque, você pensa:
-                “Como quero que ele fique para ser fácil de achar, contar
-                e transportar?”.
-            </p>
-
-            <p><strong>Hábito 3 – Primeiro o mais importante</strong></p>
-            <p>
-                Aqui entra o tal do <strong>Quadrante II</strong>.
-                É bem simples:
-            </p>
-            <ul>
-                <li><strong>Quadrante II = coisas importantes, mas que não estão pegando fogo agora.</strong></li>
-            </ul>
-            <p>Exemplos de Quadrante II:</p>
-            <ul>
-                <li>fazer manutenção preventiva no veículo, antes de quebrar;</li>
-                <li>treinar a equipe, antes de vir um erro grave;</li>
-                <li>planejar a semana, antes que ela vire um caos;</li>
-                <li>cuidar da saúde, antes de adoecer.</li>
-            </ul>
-            <p>
-                Quem vive bastante no Quadrante II tem menos crise,
-                menos “correria doida” e mais controle da própria vida.
-            </p>
-        </div>
+        <ul>
+            <li><strong>A mudança começa dentro:</strong> nada muda fora se você não muda por dentro.</li>
+            <li><strong>Você escolhe como reage:</strong> mesmo sem controlar tudo, seu comportamento muda tudo.</li>
+            <li><strong>Objetivo dá direção:</strong> quem sabe o que quer decide melhor e vive com mais foco.</li>
+            <li><strong>Importante > Urgente:</strong> viver só na correria cansa; planejar evita problemas.</li>
+            <li><strong>Confiar leva tempo:</strong> cada atitude é um depósito (ou saque) na conta da confiança.</li>
+        </ul>
 
         <div class="card">
-            <strong>Resumo da vitória particular:</strong><br><br>
-            1. Eu assumo minhas escolhas.<br>
-            2. Eu sei para onde quero ir.<br>
-            3. Eu organizo meu tempo pelo que é importante, não só pelo que grita.
+            <strong>Insight prático:</strong><br>
+            Quando você organiza sua vida igual organiza um bom processo logístico, tudo fica mais leve e mais eficiente.
         </div>
     </section>
 
-    <!-- VITÓRIA PÚBLICA -->
-    <section class="section reverse">
-        <div class="text-block">
-            <h2>Hábitos 4, 5 e 6 – você com os outros</h2>
-            <p><strong>Hábito 4 – Pense ganha/ganha</strong></p>
-            <p>
-                Em vez de “eu ganho, você perde”, a ideia é:
-                “vamos achar uma saída boa para os dois”.
-                Exemplo: negociação com cliente que quer preço baixo.
-                Você ajusta o serviço, prazo, volume, até chegar num ponto
-                bom para a Unilog e para o cliente.
-            </p>
-
-            <p><strong>Hábito 5 – Procure primeiro compreender</strong></p>
-            <p>
-                Antes de falar “você está errado”, você escuta de verdade.
-                Exemplo: um colaborador com desempenho ruim.
-                Em vez de só bronca, você pergunta o que está acontecendo,
-                ouve, entende, depois fala sua parte.
-            </p>
-
-            <p><strong>Hábito 6 – Crie sinergia</strong></p>
-            <p>
-                Sinergia é “1 + 1 = 3”.
-                Juntar pessoas diferentes para ter uma solução melhor.
-                Exemplo: alguém muito bom em processo + alguém bom em tecnologia
-                + alguém bom em pessoas. Juntos, montam uma operação muito mais forte.
-            </p>
-        </div>
-
-        <div class="card">
-            <strong>Resumo da vitória pública:</strong><br><br>
-            • Eu não preciso ganhar sempre “passando por cima” do outro.<br>
-            • Eu escuto antes de responder.<br>
-            • Eu vejo as diferenças das pessoas como força, não como problema.
-        </div>
-    </section>
-
-    <!-- HÁBITO 7 -->
+    <!-- SEÇÃO 3 -->
     <section class="section">
-        <div class="text-block">
-            <h2>Hábito 7 – Afine o instrumento</h2>
-            <p>
-                “Afinar o instrumento” é cuidar de você mesmo.
-                Se você não se cuida, uma hora quebra.
-            </p>
-            <p>O livro fala de 4 áreas:</p>
-            <ul>
-                <li><strong>Corpo:</strong> sono, comida, exercício.</li>
-                <li><strong>Mente:</strong> aprender coisas novas, ler, estudar.</li>
-                <li><strong>Emoções e social:</strong> família, amigos, colegas de trabalho, respeito.</li>
-                <li><strong>Espiritual:</strong> valores, fé, propósito, aquilo que dá sentido à vida.</li>
-            </ul>
-            <p>
-                Pequenos hábitos diários (caminhar, ler um pouco, conversar com alguém importante,
-                ter um momento de silêncio) mantêm você forte para aguentar pressão.
-            </p>
-        </div>
+        <h2>Entendendo os 7 Hábitos na Prática</h2>
+
+        <h3>1. Seja Proativo</h3>
+        <p>Proativo é fazer antes do problema aparecer. Igual fazer revisão no carro antes de quebrar.</p>
+
+        <h3>2. Comece com o Objetivo em Mente</h3>
+        <p>É saber para onde está indo. Igual desenhar o mapa antes de iniciar o transporte.</p>
+
+        <h3>3. Primeiro o Mais Importante</h3>
+        <p>Chamado de Quadrante II: coisas importantes, mas que ainda não viraram emergência.</p>
 
         <div class="card">
-            <strong>Ideia-chave:</strong><br><br>
-            Você é o principal “equipamento” da sua vida.
-            Se não fizer manutenção em você, tudo o resto sofre:
-            trabalho, casa, saúde e até o humor.
+            Exemplos de Quadrante II:<br><br>
+            • Treinar equipe<br>
+            • Planejar a semana<br>
+            • Fazer manutenção preventiva<br>
+            • Cuidar da saúde antes de adoecer
         </div>
+
+        <h3>4. Pense Ganha/Ganha</h3>
+        <p>Buscar soluções boas para todos: você, o outro e a empresa.</p>
+
+        <h3>5. Procure Primeiro Compreender</h3>
+        <p>Ouvir antes de responder. Isso evita brigas e melhora acordos.</p>
+
+        <h3>6. Crie Sinergia</h3>
+        <p>Juntar forças diferentes para criar soluções melhores.</p>
+
+        <h3>7. Afine o Instrumento</h3>
+        <p>Cuidar de você em 4 áreas: corpo, mente, emoções e propósito.</p>
     </section>
 
-    <!-- BANNER OBJETIVO FINAL -->
-    <div class="banner">
-        OBJETIVO FINAL DO LIVRO – NA VIDA REAL
-    </div>
-
-    <!-- GRID DE EXEMPLOS CLAROS -->
-    <section>
-        <div class="grid">
-            <div class="grid-item">
-                <h3>Na sua vida</h3>
-                <p>
-                    • Você sabe o que quer para o futuro.<br>
-                    • Consegue dizer “não” para coisas que atrapalham.<br>
-                    • Organiza melhor dinheiro, tempo e energia.<br>
-                    • Sente menos culpa e menos bagunça mental.
-                </p>
-            </div>
-
-            <div class="grid-item">
-                <h3>No trabalho</h3>
-                <p>
-                    • Menos correria sem sentido, mais planejamento.<br>
-                    • Menos conflito de ego, mais foco na solução.<br>
-                    • Times que falam mais abertamente e confiam mais.<br>
-                    • Processos mais “redondos”, com menos surpresa ruim.
-                </p>
-            </div>
-
-            <div class="grid-item">
-                <h3>Nos relacionamentos</h3>
-                <p>
-                    • Você briga menos e conversa mais.<br>
-                    • Aprende a ouvir de verdade o outro.<br>
-                    • Cria acordos claros em casa e no trabalho.<br>
-                    • A confiança fica mais forte, passo a passo.
-                </p>
-            </div>
-        </div>
+    <!-- SEÇÃO 4 -->
+    <section class="section">
+        <h2>Resultados na Vida Real</h2>
 
         <div class="grid">
             <div class="grid-item">
-                <h3>Em você mesmo</h3>
-                <p>
-                    • Você se vê como responsável pela própria vida.<br>
-                    • Entende que erros são aprendizado.<br>
-                    • Melhora um pouco todo dia, em vez de esperar “milagre”.
-                </p>
+                <h3>Na Vida</h3>
+                <p>Mais calma, mais foco, menos bagunça mental.</p>
             </div>
 
             <div class="grid-item">
-                <h3>Ganhos práticos</h3>
-                <p>
-                    • Menos retrabalho, menos desgaste emocional.<br>
-                    • Mente mais calma para tomar decisão.<br>
-                    • Vida mais parecida com aquilo que você realmente quer.
-                </p>
+                <h3>No Trabalho</h3>
+                <p>Menos retrabalho, mais planejamento, mais eficiência.</p>
             </div>
 
             <div class="grid-item">
-                <h3>Frase final</h3>
-                <p>
-                    O objetivo do livro é ajudar qualquer pessoa,
-                    em qualquer nível, a viver de forma mais
-                    simples, organizada e com sentido.  
-                    Um passo de cada vez, um hábito de cada vez.
-                </p>
+                <h3>Nos Relacionamentos</h3>
+                <p>Menos conflito, mais diálogo, mais confiança.</p>
+            </div>
+
+            <div class="grid-item">
+                <h3>Em Você</h3>
+                <p>Mais responsabilidade, mais clareza, mais evolução pessoal.</p>
+            </div>
+
+            <div class="grid-item">
+                <h3>Ganhos Reais</h3>
+                <p>Resultados mais consistentes em todas as áreas.</p>
+            </div>
+
+            <div class="grid-item">
+                <h3>Frase Final</h3>
+                <p>“Mudando seus hábitos, você muda sua vida inteira.”</p>
             </div>
         </div>
     </section>
@@ -430,8 +255,7 @@
 </main>
 
 <footer>
-    Resumo, insights, aprendizados e exemplos baseados no livro
-    “Os 7 Hábitos das Pessoas Altamente Eficazes”.
+    Resumo baseado no livro “Os 7 Hábitos das Pessoas Altamente Eficazes”.
 </footer>
 
 </body>
